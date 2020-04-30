@@ -56,7 +56,7 @@
     "configstore": "^2.0.0",
     "dagre": "^0.7.4",
     "eventemitter2": "^2.0.0",
-    "jquery": "^2.2.4",
+    "jquery": "^3.5.0",
     "linkurious": "^1.5.1",
     "mustache": "^2.2.1",
     "neo4j-driver": "^1.0.4",
