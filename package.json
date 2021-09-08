@@ -24,7 +24,9 @@
     "dev": "concurrently -k \"babel-node server.js\" \"npm start\"",
     "winbuild": "webpack --config webpack.config.production.js && electron-packager . BloodHound --platform=win32 --arch=all --overwrite --prune --ignore=./*.zip --ignore=./BloodHound.* --ignore=BloodHoundExampleDB.graphdb --icon=src/img/icon.ico",
     "macbuild": "webpack --config webpack.config.production.js && electron-packager . BloodHound --platform=darwin --arch=all --overwrite --prune --ignore=./*.zip --ignore=./BloodHound.* --ignore=BloodHoundExampleDB.graphdb --icon=src/img/icon.icns",
-    "linuxbuild": "webpack --config webpack.config.production.js && electron-packager . BloodHound --platform=linux --arch=all --overwrite --prune --ignore=./*.zip --ignore=./BloodHound.* --ignore=BloodHoundExampleDB.graphdb"
+    "linuxbuild": "webpack --config webpack.config.production.js && electron-packager . BloodHound --platform=linux --arch=all --overwrite --prune --ignore=./*.zip --ignore=./BloodHound.* --ignore=BloodHoundExampleDB.graphdb",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "babel": {
     "presets": [
@@ -64,6 +66,8 @@
     "react-addons-css-transition-group": "^15.3.1",
     "react-bootstrap": "^0.30.3",
     "react-dom": "^15.3.1",
-    "react-if": "^2.1.0"
-  }
+    "react-if": "^2.1.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
